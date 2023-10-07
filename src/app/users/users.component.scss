@@ -1,13 +1,31 @@
-.btns {
-    // float: none;
-}
+// @media (max-width: 767px) {
+//     .btns .col {
+//       margin-bottom: 10px; /* Add some spacing between the buttons */
+//     }
+  
+//     .btns .col {
+//       flex: 1; /* Make both columns take up equal space */
+//       max-width: 100%; /* Ensure they take up the full width */
+//     }
+    
+//     .btns .col.text-right {
+//       text-align: center; /* Center the text for the reset button */
+//     }
+    
+//     .btns .col.text-right button {
+//       width: 100%; /* Make the reset button take up full width */
+//     }
+//   }
+// .btns .col button {
+//     width: 100%;
+//   }
 
 .btn-primary {
-    // float: left;
-    background-color: #2D31FA;
+  // float: left;
+  background-color: #2d31fa;
 }
 
 .btn-secondary {
-    // float: right;
-    background-color: #051367;
+  // float: right;
+  background-color: #051367;
 }
