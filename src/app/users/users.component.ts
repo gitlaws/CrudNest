@@ -10,15 +10,19 @@ export class UsersComponent implements OnInit {
   userForm: any;
   users: any;
 
-  constructor(public fb:FormBuilder) {
-    this.userForm = this.fb.group ({
-      Name: [""],
-      Email: [""],
-      Mobile: [""],
-      Age: [""],
-      id:[""],
-    })
+  constructor(public fb: FormBuilder) {
+    this.userForm = this.fb.group({
+      Name: [''],
+      Email: [''],
+      Mobile: [''],
+      Age: [''],
+      id: [],
+    });
   }
 
   ngOnInit(): void {}
+
+  SubmitForm() {
+    console.log(this.userForm.value);
+  }
 }
