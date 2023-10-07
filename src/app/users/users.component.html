@@ -36,7 +36,7 @@
       role="tabpanel"
       aria-labelledby="home-tab"
     >
-      <form>
+      <form [formGroup]="userForm">
         <div class="row mt-2 d-flex">
           <div class="form-group col-md-6">
             <label for="formGroupExampleInput">Name</label>
@@ -87,7 +87,6 @@
             <button type="reset" class="btn btn-secondary">Reset</button>
           </div>
         </div>
-        
       </form>
     </div>
     <div
