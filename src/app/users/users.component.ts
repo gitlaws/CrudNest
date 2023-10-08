@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
-
+declare var $:any
 @Component({
   selector: 'app-users',
   templateUrl: './users.component.html',
@@ -12,12 +12,12 @@ export class UsersComponent implements OnInit {
 
   constructor(public fb: FormBuilder) {
     this.userForm = this.fb.group({
-      Name: [''],
-      Email: [''],
-      Mobile: [''],
-      Age: [''],
+      Name: [""],
+      Email: [""],
+      Mobile: [""],
+      Age: [""],
       id: [],
-    });
+    })
   }
 
   ngOnInit(): void {}
