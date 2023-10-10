@@ -23,6 +23,6 @@ export class UsersComponent implements OnInit {
   ngOnInit(): void {}
 
   SubmitForm() {
-    console.log(this.userForm.value);
+    console.log(this.userForm.value)
   }
 }
