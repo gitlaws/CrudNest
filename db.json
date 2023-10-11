@@ -15,32 +15,11 @@
   ],
   "Users": [
     {
-      "id": 1,
-      "Name": "Some Name",
-      "Email": "SomeEmail@gmail.com",
-      "Mobile": 1,
-      "Age": 1
-    },
-    {
-      "Name": "random user",
-      "Email": "random@gmail.com",
-      "Mobile": 1231231234,
-      "Age": 99,
-      "id": 2
-    },
-    {
-      "Name": "array",
-      "Email": "array@gmail.com",
-      "Mobile": 1234512344,
-      "Age": 45,
-      "id": 3
-    },
-    {
-      "Name": "your name",
-      "Email": "anyeamail@gmail.com",
-      "Mobile": 1526231478,
-      "Age": 89,
-      "id": 4
+      "Name": "Stanislaw Wasilewski",
+      "Email": "lawmski@gmail.com",
+      "Mobile": 3132214372,
+      "Age": 36,
+      "id": 1
     }
   ],
   "profile": {

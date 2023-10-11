@@ -30,13 +30,23 @@ export class UsersComponent implements OnInit {
     this.service.AddUpdateUser(this.userForm.value).subscribe((data) => {
       alert('Added');
       this.userForm.reset();
+      this.GetAllUsers();
       console.log(data);
     });
   }
 
   GetAllUsers() {
-    this.service.GetAllUsers().subscribe(data => {
+    this.service.GetAllUsers().subscribe((data) => {
       console.log('users', data);
+      this.users = data;
     });
+  }
+
+  DeleteUserById(ID: any) {
+    debugger
+    this.service.DeleteUserById(ID).subscribe((data) => {
+      alert('User Deleted');
+    });
+    this.GetAllUsers();
   }
 }

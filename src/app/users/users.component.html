@@ -99,20 +99,23 @@
         <thead>
           <tr>
             <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Mobile</th>
+            <th scope="col">Age</th>
             <th scope="col">Actions</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Stanislaw</td>
-            <td>Wasilewski</td>
-            <td>Rev</td>
+          <tr *ngFor="let item of users; i: index">
+            <th scope="row">{{ item.id }}</th>
+            <td>{{ item.Name }}</td>
+            <td>{{ item.Email }}</td>
+            <td>{{ item.Mobile }}</td>
+            <td>{{ item.Age }}</td>
+
             <td>
-              <button type="button" class="btn btn-danger">Delete</button>
+              <button type="button" (click)="DeleteUserById(item.id)" class="btn btn-danger">Delete</button>
             </td>
           </tr>
         </tbody>
