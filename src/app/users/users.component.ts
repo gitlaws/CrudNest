@@ -21,13 +21,22 @@ export class UsersComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.GetAllUsers();
+  }
 
   SubmitForm() {
     console.log(this.userForm.value);
     this.service.AddUpdateUser(this.userForm.value).subscribe((data) => {
       alert('Added');
+      this.userForm.reset();
       console.log(data);
+    });
+  }
+
+  GetAllUsers() {
+    this.service.GetAllUsers().subscribe(data => {
+      console.log('users', data);
     });
   }
 }

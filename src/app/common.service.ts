@@ -30,4 +30,8 @@ export class CommonService {
     debugger;
     return this.http.post(this.url + 'Users', User);
   }
+
+  GetAllUsers(): Observable<any> {
+    return this.http.get(this.url + 'Users');
+  }
 }
