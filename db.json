@@ -15,11 +15,11 @@
   ],
   "Users": [
     {
-      "Name": "some comment",
-      "Email": "1",
+      "id": 1,
+      "Name": "Some Name",
+      "Email": "SomeEmail@gmail.com",
       "Mobile": 1,
-      "Age": 1,
-      "id": 1
+      "Age": 1
     }
   ],
 

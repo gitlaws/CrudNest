@@ -25,5 +25,9 @@ export class UsersComponent implements OnInit {
 
   SubmitForm() {
     console.log(this.userForm.value);
+    this.service.AddUpdateUser(this.userForm.value).subscribe((data) => {
+      alert('Added');
+      console.log(data);
+    });
   }
 }

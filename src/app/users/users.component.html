@@ -1,32 +1,28 @@
 <div class="container mt-2">
   <ul class="nav nav-tabs" id="myTab" role="tablist">
-    <li class="nav-item" role="presentation">
-      <button
+    <li class="nav-item">
+      <a
         class="nav-link active"
         id="home-tab"
-        data-bs-toggle="tab"
-        data-bs-target="#home"
-        type="button"
+        data-toggle="tab"
+        href="#home"
         role="tab"
         aria-controls="home"
         aria-selected="true"
+        >Add User</a
       >
-        Add User
-      </button>
     </li>
-    <li class="nav-item" role="presentation">
-      <button
+    <li class="nav-item">
+      <a
         class="nav-link"
         id="profile-tab"
-        data-bs-toggle="tab"
-        data-bs-target="#profile"
-        type="button"
+        data-toggle="tab"
+        href="#profile"
         role="tab"
         aria-controls="profile"
         aria-selected="false"
+        >User List</a
       >
-        User List
-      </button>
     </li>
   </ul>
   <div class="tab-content" id="myTabContent">
@@ -36,7 +32,7 @@
       role="tabpanel"
       aria-labelledby="home-tab"
     >
-      <form [formGroup]="userForm" (ngSubmit)="(SubmitForm)">
+      <form [formGroup]="userForm" (ngSubmit)="SubmitForm()">
         <div class="row mt-2 d-flex">
           <div class="form-group col-md-6">
             <label for="formGroupExampleInput">Name</label>
@@ -50,7 +46,7 @@
             />
           </div>
           <div class="form-group col-md-6">
-            <label for="formGroupExampleInput2">Mobile Number</label>
+            <label for="formGroupExampleInput2">Mobile No.</label>
             <input
               type="number"
               class="form-control"
@@ -64,7 +60,7 @@
 
         <div class="row mt-2 d-flex">
           <div class="form-group col-md-6">
-            <label for="formGroupExampleInput3">Email</label>
+            <label for="formGroupExampleInput">Email</label>
             <input
               type="text"
               class="form-control"
@@ -75,7 +71,7 @@
             />
           </div>
           <div class="form-group col-md-6">
-            <label for="formGroupExampleInput4">Age</label>
+            <label for="formGroupExampleInput2">Age</label>
             <input
               type="number"
               class="form-control"
@@ -87,19 +83,11 @@
           </div>
         </div>
 
-        <div class="row mt-2 d-flex gap-1 btns">
-          <div class="col">
-            <button
-              type="submit"
-              class="btn btn-primary"
-              (click)="SubmitForm()"
-            >
-              Add
-            </button>
-          </div>
-          <div class="col text-right">
-            <button type="reset" class="btn btn-secondary">Reset</button>
-          </div>
+        <div class="row mt-2 d-flex d-grid gap-1 mt-2 btns">
+          <button type="submit" class="btn ml-1 mr-1 btn-primary">Add</button>
+          <button type="reset" class="btn ml-1 mr-1 btn-secondary">
+            Reset
+          </button>
         </div>
       </form>
     </div>
@@ -108,8 +96,6 @@
       id="profile"
       role="tabpanel"
       aria-labelledby="profile-tab"
-    >
-      User List
-    </div>
+    ></div>
   </div>
 </div>
