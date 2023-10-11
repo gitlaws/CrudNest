@@ -20,20 +20,6 @@
       "Email": "SomeEmail@gmail.com",
       "Mobile": 1,
       "Age": 1
-    },
-    {
-      "Name": "Stanislaw Wasilewski",
-      "Email": "lawmski@gmail.com",
-      "Mobile": 3132214372,
-      "Age": 36,
-      "id": 2
-    },
-    {
-      "Name": "Insert Your Name Here",
-      "Email": "youremail@gmail.com",
-      "Mobile": 5173336666,
-      "Age": 99,
-      "id": 3
     }
   ],
   "profile": {
