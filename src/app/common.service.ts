@@ -26,16 +26,19 @@ export class CommonService {
     return this.http.post<any>(this.apiUrl, requestBody, { headers });
   }
 
-  AddUpdateUser(User: any): Observable<any> {
+  AddUpdateUser(User: any, type: string): Observable<any> {
     debugger;
-    return this.http.post(this.url + 'Users', User);
+    if (type == 'Add') {
+      return this.http.post(this.url + 'Users', User);
+    } else {
+      return this.http.put(this.url + 'Users/' + User.id, User);
+    }
   }
 
   GetAllUsers(): Observable<any> {
     return this.http.get(this.url + 'Users');
   }
 
-  
   DeleteUserById(ID: any): Observable<any> {
     return this.http.delete(this.url + 'Users/' + ID);
   }
@@ -43,5 +46,4 @@ export class CommonService {
   GetUserById(ID: any): Observable<any> {
     return this.http.get(this.url + 'Users/' + ID);
   }
-
 }
