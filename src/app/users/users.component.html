@@ -115,7 +115,20 @@
             <td>{{ item.Age }}</td>
 
             <td>
-              <button type="button" (click)="DeleteUserById(item.id)" class="btn btn-danger">Delete</button>
+              <button
+                type="button"
+                (click)="GetUserById(item.id)"
+                class="btn btn-primary"
+              >
+                Edit
+              </button>
+              <button
+                type="button"
+                (click)="DeleteUserById(item.id)"
+                class="btn btn-danger"
+              >
+                Delete
+              </button>
             </td>
           </tr>
         </tbody>

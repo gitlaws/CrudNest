@@ -43,10 +43,17 @@ export class UsersComponent implements OnInit {
   }
 
   DeleteUserById(ID: any) {
-    debugger
+    debugger;
     this.service.DeleteUserById(ID).subscribe((data) => {
       alert('User Deleted');
     });
     this.GetAllUsers();
+  }
+
+  GetUserById(ID: any) {
+    debugger;
+    this.service.GetUserById(ID).subscribe((data) => {
+      console.log('user detail', data);
+    });
   }
 }
