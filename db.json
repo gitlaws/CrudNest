@@ -20,13 +20,6 @@
       "Mobile": 3132214372,
       "Age": 36,
       "id": 1
-    },
-    {
-      "Name": "Test User 1",
-      "Email": "testuser@gmail.com",
-      "Mobile": 5121231526,
-      "Age": 23,
-      "id": 2
     }
   ],
   "profile": {
