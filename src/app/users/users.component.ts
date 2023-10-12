@@ -53,7 +53,14 @@ export class UsersComponent implements OnInit {
   GetUserById(ID: any) {
     debugger;
     this.service.GetUserById(ID).subscribe((data) => {
+      alert('get user successfully');
       console.log('user detail', data);
+      this.userForm.patchValue({
+        Name: data.Name,
+        Email: data.Email,
+        Mobile: data.Mobile,
+        Age: data.Age,
+      });
     });
   }
 }
