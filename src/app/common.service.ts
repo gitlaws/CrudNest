@@ -26,7 +26,7 @@ export class CommonService {
     return this.http.post<any>(this.apiUrl, requestBody, { headers });
   }
 
-  AddUpdateUser(User: any, type: string): Observable<any> {
+  AddUpdateUser(User: any, type: any): Observable<any> {
     debugger;
     if (type == 'Add') {
       return this.http.post(this.url + 'Users', User);

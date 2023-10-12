@@ -22,10 +22,10 @@
       "id": 1
     },
     {
-      "Name": "test user",
+      "Name": "Test User 1",
       "Email": "testuser@gmail.com",
-      "Mobile": 9111234859,
-      "Age": 25,
+      "Mobile": 5121231526,
+      "Age": 23,
       "id": 2
     }
   ],

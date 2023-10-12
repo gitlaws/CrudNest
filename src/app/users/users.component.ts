@@ -27,7 +27,6 @@ export class UsersComponent implements OnInit {
 
   SubmitForm() {
     var type = this.userForm.value.id == null ? 'Add' : 'Update';
-    console.log(this.userForm.value);
     this.service.AddUpdateUser(this.userForm.value, type).subscribe((data) => {
       if (type == 'Add') {
         alert('Added');
@@ -59,7 +58,6 @@ export class UsersComponent implements OnInit {
   GetUserByID(ID: any) {
     debugger;
     this.service.GetUserByID(ID).subscribe((data) => {
-      alert('get user successfully');
       console.log('user detail', data);
       $('#home').addClass('show');
       $('#home').addClass('active');
@@ -67,6 +65,7 @@ export class UsersComponent implements OnInit {
       $('#profile').removeClass('active');
       this.userForm.patchValue({
         Name: data.Name,
+        id: data.id,
         Email: data.Email,
         Mobile: data.Mobile,
         Age: data.Age,
