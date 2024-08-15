@@ -1,10 +1,10 @@
 <div class="container mt-2">
   <ul class="nav nav-tabs" id="myTab" role="tablist">
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
       <a
         class="nav-link active"
         id="home-tab"
-        data-toggle="tab"
+        data-bs-toggle="tab"
         href="#home"
         role="tab"
         aria-controls="home"
@@ -12,11 +12,11 @@
         >Add User</a
       >
     </li>
-    <li class="nav-item">
+    <li class="nav-item" role="presentation">
       <a
         class="nav-link"
         id="profile-tab"
-        data-toggle="tab"
+        data-bs-toggle="tab"
         href="#profile"
         role="tab"
         aria-controls="profile"
@@ -39,53 +39,10 @@
             <input
               type="text"
               class="form-control"
-              name="Name"
-              formControlName="Name"
               id="formGroupExampleInput"
-              placeholder="Enter name"
+              formControlName="name"
             />
           </div>
-          <div class="form-group col-md-6">
-            <label for="formGroupExampleInput2">Mobile No.</label>
-            <input
-              type="number"
-              class="form-control"
-              name="Mobile"
-              formControlName="Mobile"
-              id="formGroupExampleInput2"
-              placeholder="Enter mobile"
-            />
-          </div>
-        </div>
-
-        <div class="row mt-2 d-flex">
-          <div class="form-group col-md-6">
-            <label for="formGroupExampleInput">Email</label>
-            <input
-              type="text"
-              class="form-control"
-              name="Email"
-              formControlName="Email"
-              id="formGroupExampleInput"
-              placeholder="Enter email"
-            />
-          </div>
-          <div class="form-group col-md-6">
-            <label for="formGroupExampleInput2">Age</label>
-            <input
-              type="number"
-              class="form-control"
-              name="Age"
-              formControlName="Age"
-              id="formGroupExampleInput2"
-              placeholder="Enter age"
-            />
-          </div>
-        </div>
-
-        <div class="row mt-2 d-flex d-grid gap-1 mt-2 btns">
-          <button type="submit" class="btn btn-primary">Add</button>
-          <button type="reset" class="btn btn-secondary">Reset</button>
         </div>
       </form>
     </div>
@@ -95,44 +52,46 @@
       role="tabpanel"
       aria-labelledby="profile-tab"
     >
-      <table class="table">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Name</th>
-            <th scope="col">Email</th>
-            <th scope="col">Mobile</th>
-            <th scope="col">Age</th>
-            <th scope="col">Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let item of users">
-            <th scope="row">{{ item.id }}</th>
-            <td>{{ item.Name }}</td>
-            <td>{{ item.Email }}</td>
-            <td>{{ item.Mobile }}</td>
-            <td>{{ item.Age }}</td>
-
-            <td>
-              <button
-                type="button"
-                (click)="GetUserByID(item.id)"
-                class="btn btn-primary m-1"
-              >
-                Edit
-              </button>
-              <button
-                type="button"
-                (click)="DeleteUserByID(item.id)"
-                class="btn btn-danger m-1"
-              >
-                Delete
-              </button>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+      <!-- User list content goes here -->
     </div>
   </div>
 </div>
+>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Mobile</th>
+      <th scope="col">Age</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of users">
+      <th scope="row">{{ item.id }}</th>
+      <td>{{ item.Name }}</td>
+      <td>{{ item.Email }}</td>
+      <td>{{ item.Mobile }}</td>
+      <td>{{ item.Age }}</td>
+
+      <td>
+        <button
+          type="button"
+          (click)="GetUserByID(item.id)"
+          class="btn btn-primary m-1"
+        >
+          Edit
+        </button>
+        <button
+          type="button"
+          (click)="DeleteUserByID(item.id)"
+          class="btn btn-danger m-1"
+        >
+          Delete
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
